@@ -1,0 +1,18 @@
+[project]
+name = "xdmfConverter"
+version = "0.0.1"
+authors = [
+  { name="Christoph Wolf", email="christoph.wolf@bam.de" },
+]
+description = "Converter to group splitted timeseries data into single time step groups"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/BAMresearch/xdmfConverter"
+Issues = "https://github.com/BAMresearch/xdmfConverter/issues"
