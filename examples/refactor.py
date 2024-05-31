@@ -6,4 +6,4 @@ source_folder = str(Path(__file__).parent)
 
 # xdmf_convert(source_folder, '/density', '.xdmf', g_name='density')
 
-xdmf_convert(source_folder, '/test_am_multiple_layer', '.xdmf', g_name='displacement')
+xdmf_convert(source_folder, '/test_am_multiple_layer_3d', '.xdmf', g_name='displacement')

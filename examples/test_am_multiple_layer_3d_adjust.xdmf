@@ -1,0 +1,304 @@
+<?xml version="1.0" ?>
+<Xdmf xmlns:ns0="https://www.w3.org/2001/XInclude" xmlns:xi="https://www.w3.org/2001/XInclude" Version="3.0">
+  <Domain>
+    <Grid Name="mesh" GridType="Uniform">
+      
+      
+      <Topology TopologyType="Hexahedron" NumberOfElements="100" NodesPerElement="8">
+        
+        
+        <DataItem Dimensions="100 8" NumberType="Int" Format="HDF">test_am_multiple_layer_3d.h5:/Mesh/mesh/topology</DataItem>
+        
+      
+      </Topology>
+      
+      
+      <Geometry GeometryType="XYZ">
+        
+        
+        <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Mesh/mesh/geometry</DataItem>
+        
+      
+      </Geometry>
+      
+    
+    </Grid>
+    
+    
+    <Grid Name="density" GridType="Collection" CollectionType="Temporal">
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="5"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/5</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/5</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/5</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="10"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/10</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/10</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/10</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="15"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/15</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/15</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/15</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="20"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/20</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/20</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/20</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="25"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/25</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/25</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/25</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="30"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/30</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/30</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/30</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="35"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/35</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/35</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/35</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="40"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/40</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/40</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/40</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="45"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/45</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/45</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/45</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="50"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/50</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/50</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/50</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="55"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/55</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/55</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/55</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="60"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/60</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/60</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/60</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="65"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/65</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/65</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/65</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="70"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/70</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/70</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/70</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="75"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/75</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/75</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/75</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="80"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/80</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/80</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/80</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="85"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/85</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/85</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/85</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="90"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/90</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/90</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/90</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="95"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/95</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/95</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/95</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="100"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/100</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/100</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/100</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+      <Grid Name="displacement" GridType="Uniform">
+        <Time Value="105"/>
+        <Attribute Name="displacement" AttributeType="Vector" Center="Node">
+          <DataItem Dimensions="198 3" Format="HDF">test_am_multiple_layer_3d.h5:/Function/displacement/105</DataItem>
+        </Attribute>
+        <Attribute Name="Stress" AttributeType="Tensor" Center="Node">
+          <DataItem Dimensions="198 9" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Stress/105</DataItem>
+        </Attribute>
+        <Attribute Name="Youngs_Modulus" AttributeType="Scalar" Center="Node">
+          <DataItem Dimensions="198 1" Format="HDF">test_am_multiple_layer_3d.h5:/Function/Youngs_Modulus/105</DataItem>
+        </Attribute>
+        <ns0:include xpointer="xpointer(/Xdmf/Domain/Grid[@GridType='Uniform'][1]/*[self::Topology or self::Geometry])"/>
+      </Grid>
+    </Grid>
+  </Domain>
+</Xdmf>
