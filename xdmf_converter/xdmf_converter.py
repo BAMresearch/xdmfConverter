@@ -3,7 +3,7 @@ import xml.dom.minidom as minidom
 from collections import defaultdict
 
 # Function to add a grid for each time step
-def add_grid_for_time(collection, time, attributes, g_name='density'):
+def add_grid_for_time(collection, time, attributes, g_name='mesh'):
     new_grid = ET.SubElement(collection, 'Grid', {
         'Name': g_name,
         'GridType': 'Uniform'
@@ -60,7 +60,7 @@ def xdmf_convert(source_folder, source_file, source_file_extension, g_name='dens
 
     # Create a new grid collection
     grid_collection = ET.SubElement(domain, 'Grid', {
-        'Name': 'density',
+        'Name': 'TimeSeries',
         'GridType': 'Collection',
         'CollectionType': 'Temporal'
     })
@@ -74,7 +74,7 @@ def xdmf_convert(source_folder, source_file, source_file_extension, g_name='dens
                     continue  # Skip the xi:include tag
                 if element.tag == 'Attribute':
                     attributes.append(element)
-        add_grid_for_time(grid_collection, time_value, attributes, g_name=g_name)
+        add_grid_for_time(grid_collection, time_value, attributes)
 
     # Convert the target XML to a string with indentation
     target_str = ET.tostring(target_root, encoding='unicode')
