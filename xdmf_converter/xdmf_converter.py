@@ -41,6 +41,10 @@ def xdmf_convert(source_folder, source_file, source_file_extension, g_name='dens
 
     # Preserve the initial "mesh" grid
     mesh_grid = source_root.find('.//Grid[@Name="mesh"]')
+    if mesh_grid is None:
+        mesh_grid = source_root.find('.//Grid[@Name="Grid"]') # alternative name
+    if mesh_grid is None:
+        raise ValueError('No Grid named "mesh" or "Grid" found in the source file')
     domain.append(mesh_grid)
 
     # Collect grids and group by time values
